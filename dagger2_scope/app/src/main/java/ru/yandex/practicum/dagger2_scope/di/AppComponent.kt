@@ -4,6 +4,7 @@ import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.Subcomponent
+import ru.yandex.practicum.dagger2_scope.FragmentNews
 import ru.yandex.practicum.dagger2_scope.MainActivity
 import ru.yandex.practicum.dagger2_scope.RemoteHost
 import javax.inject.Qualifier
@@ -32,6 +33,7 @@ class ModuleRemoteHost {
 )
 interface ComponentNews {
     fun inject(activity: MainActivity)
+    fun injectToFragmentNews(fragment: FragmentNews)
 }
 
 @Module
